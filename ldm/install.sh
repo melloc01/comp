@@ -1,4 +1,5 @@
-sudo ln -s /home/aluno/ldm/nasm.sh /usr/bin/xnasm
-sudo ln -s /home/aluno/ldm/seeReturn.sh /usr/bin/seeReturn
-sudo ln -s /home/aluno/ldm/nasm-see.sh /usr/bin/seenasm
+pwd_value=`pwd`
 
+sudo ln -s $pwd_value/xnasm /usr/bin/
+sudo ln -s $pwd_value/seeReturn /usr/bin/
+sudo ln -s $pwd_value/seenasm /usr/bin/

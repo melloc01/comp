@@ -24,6 +24,6 @@ var2:	db	10
 	mov bx,[var2]
 	mul bx
 	
-	mov	ebx,eax			; move eax para eax para retornar o valor para o kernel
+	mov	ebx,eax				; move eax para eax para retornar o valor para o kernel
 	mov 		eax,1		; eax = 1, comando de saida para o kernel
-	int		0x80		; chama interrupcao - fim do programa
+	int		0x80			; chama interrupcao - fim do programa

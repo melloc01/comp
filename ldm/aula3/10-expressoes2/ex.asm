@@ -30,19 +30,19 @@ F:	db	2
 
   global _start
  
- _start:
+  _start:
 	
 	mov 	AL,[A]			; AL = A
 	mul 	BYTE [E]		; AL = [A] * [E]
 	
-	mov	BL, AL			; BX = AL
+	mov	BL, AL				; BX = AL
 
-	mov	AL,[D]			; AL = [D]
+	mov	AL,[D]				; AL = [D]
 	mul 	BYTE [B]		; AL = [D] * [B]
 
-	sub	BL,AL			; BX = BX - AL
+	sub	BL,AL				; BX = BX - AL
 	
-	add	BL,[F]			; adiciona e já deixa no reg. de saída
+	add	BL,[F]				; adiciona e já deixa no reg. de saída
 
-	mov 	eax,1		; eax = 1, comando de saida para o kernel
-	int	0x80		; chama interrupcao - fim do programa
+	mov 	eax,1			; eax = 1, comando de saida para o kernel
+	int	0x80				; chama interrupcao - fim do programa

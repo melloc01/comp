@@ -20,7 +20,7 @@ F:	db	2
 
   global _start
  
- _start:
+  _start:
 	
 	mov 	eax,[A]			; eax = A
 	sub 	eax,[B]			; eax -=
@@ -32,6 +32,6 @@ F:	db	2
 	
 	sub	eax,[F]
 
-	mov	ebx,eax			; move eax para eax para retornar o valor para o kernel
+	mov	ebx,eax				; move eax para eax para retornar o valor para o kernel
 	mov 		eax,1		; eax = 1, comando de saida para o kernel
-	int		0x80		; chama interrupcao - fim do programa
+	int		0x80			; chama interrupcao - fim do programa

@@ -29,4 +29,3 @@ var6:	DB	20
 
 	mov 	eax,1
 	int	0x80
-
