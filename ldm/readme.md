@@ -19,7 +19,7 @@ Monta, Compila e roda o programa `asm`
 Monta, Compila, e roda a saída do programa no `seeReturn.sh` dado em aula
 
 ###Uso
-No diretório do exercício e o comando sem a extensão do arquivo, para o arquivo `ex.asm`:
+No diretório do exercício, use o comando sem a extensão do arquivo, exemplo: para o arquivo `ex.asm`:
 ````bash
 xnasm ex
 #ou
