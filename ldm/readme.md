@@ -1,4 +1,4 @@
-#Linguagem de Máquina
+#Linguagens de Montagem
 
 
 ###Códigos dados em aula + facilitadores
