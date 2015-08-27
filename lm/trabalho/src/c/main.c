@@ -178,6 +178,8 @@ int sumMatrixMainDiagonal (int mat[SIZE][SIZE]) {
 int main(int argc, char const *argv[]) {
 	
 	int matA[SIZE][SIZE], matB[SIZE][SIZE], matC[SIZE][SIZE], matR[SIZE][SIZE], matAux[SIZE][SIZE];
+	int mainDiagonal;
+
 	clock_t execTime;
 	
 	fillMatrix(matA);
@@ -186,10 +188,11 @@ int main(int argc, char const *argv[]) {
 
 	execTime = clock();
 
-	mul2Matrix(matA, matB, matAux);
+	mul2Matrix(matA, matC, matAux);
 	mulMatrixByConst(matAux, 3);
-	add2Matrix(matAux, matC, matR);
-
+	add2Matrix(matAux, matB, matR);
+	mainDiagonal = sumMatrixMainDiagonal(matR);
+	
 	execTime = clock() - execTime;
 
 
@@ -209,7 +212,7 @@ int main(int argc, char const *argv[]) {
 	printf("\nMatriz Resultado \n");
 	printMatrix(matR);
 
-	printf("\nValor da Diagonal principal : %d \n \n■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ \n\n", sumMatrixMainDiagonal(matR));
+	printf("\nValor da Diagonal principal : %d \n \n■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ \n\n", mainDiagonal);
 
 	return 0;
 
