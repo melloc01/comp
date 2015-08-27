@@ -5,7 +5,7 @@
 // para compilar: gcc -m32 -o ex.out main.c 
 
 #ifndef SIZE
-	#define SIZE 3
+	#define SIZE 2000
 #endif
 
 
@@ -18,6 +18,7 @@
 void fillMatrix(int matrix1[SIZE][SIZE]){
   
 	int i,j = 0;
+  	srand(time(NULL));
 
 	for(i = 0; i < SIZE; i++){
     
@@ -177,7 +178,12 @@ int sumMatrixMainDiagonal (int mat[SIZE][SIZE]) {
 
 int main(int argc, char const *argv[]) {
 	
-	int matA[SIZE][SIZE], matB[SIZE][SIZE], matC[SIZE][SIZE], matR[SIZE][SIZE], matAux[SIZE][SIZE];
+	static int matA[SIZE][SIZE]; 
+	static int matB[SIZE][SIZE]; 
+	static int matC[SIZE][SIZE]; 
+	static int matR[SIZE][SIZE]; 
+	static int matAux[SIZE][SIZE]; 
+
 	int mainDiagonal;
 
 	clock_t execTime;
@@ -197,23 +203,23 @@ int main(int argc, char const *argv[]) {
 
 
 	printf("\n■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n");
-	printf("Execução em %dms", execTime);
+	printf("Execução em %d µs", execTime);
 	printf("\n■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n");
 
-	printf("\nMatriz A \n");
-	printMatrix(matA);
+	//printf("\nMatriz A \n");
+	//printMatrix(matA);
 	
-	printf("\nMatriz B \n");
-	printMatrix(matB);
+	//printf("\nMatriz B \n");
+	//printMatrix(matB);
 
-	printf("\nMatriz C \n");
-	printMatrix(matC);
+	//printf("\nMatriz C \n");
+	//printMatrix(matC);
 	
-	printf("\nMatriz Resultado \n");
-	printMatrix(matR);
+	//printf("\nMatriz Resultado \n");
+	//printMatrix(matR);
 
 	printf("\nValor da Diagonal principal : %d \n \n■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ \n\n", mainDiagonal);
 
-	return 0;
+	return mainDiagonal;
 
 }
