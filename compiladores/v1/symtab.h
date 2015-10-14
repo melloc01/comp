@@ -1,0 +1,1 @@
+extern __SYMTAB__;
