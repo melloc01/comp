@@ -1,3 +1,14 @@
+/**
+* symtab.c
+*
+* symbol matrix and utilities for 'interpreter'
+*
+*/
+
+#include "symtab.h"
+#include "exceptions.h"
+
+
 char symtab[MAX_ENTRIES][MAXIDLEN + 1];
 
 #ifndef MAX_ENTRIES
@@ -37,7 +48,7 @@ double retrieve(char *varname) {
 		return memory[address];
 	}
 
-	exit(3);
+	exit(UNDECLARED_VARIABLE_EXCEPTION);
 
 }
 
